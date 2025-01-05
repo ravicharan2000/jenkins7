@@ -32,7 +32,7 @@ pipeline
             {
                 script
                 {
-                    cicd.tomcatDeploy("DeclarativepipelinewithSharedLibraries","172.31.1.9","testapp")
+                    cicd.tomcatDeploy("172.31.1.9","testapp")
                 }
             }
         }
@@ -43,7 +43,7 @@ pipeline
                 script
                 {
                     cicd.gitDownload("FunctionalTesting")
-                    cicd.executeSelenium("DeclarativepipelinewithSharedLibraries")
+                    cicd.executeSelenium()
                 }
             }
         }
@@ -53,7 +53,7 @@ pipeline
             {
                 script
                 {
-                    cicd.tomcatDeploy("DeclarativepipelinewithSharedLibraries","172.31.1.148","prodapp")
+                    cicd.tomcatDeploy("172.31.1.148","prodapp")
                 }
             }
         }
